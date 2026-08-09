@@ -321,7 +321,7 @@ except Exception as e:
 # ============================================================
 st.markdown("""
 <div class="sticky-header">
-    <div class="title">🏨 Hotel Booking Analytics</div>
+    <div class="title">Hotel Booking Analytics</div>
     <div class="subtitle">
         Booking patterns, seasonality and cancellation behaviour
     </div>
@@ -334,7 +334,7 @@ st.markdown("""
 st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
 st.markdown(
-    '<div class="filter-title">🎛️ Dashboard Filters</div>'
+    '<div class="filter-title">Dashboard Filters</div>'
     '<div class="filter-caption">Use the filters below to explore the data interactively.</div>',
     unsafe_allow_html=True
 )
@@ -510,7 +510,7 @@ def style_fig(fig, height=410):
 # CHART 1 - MONTHLY BOOKINGS
 # ============================================================
 st.markdown(
-    '<div class="section-heading">📈 Monthly Booking Trend</div>'
+    '<div class="section-heading">Monthly Booking Trend</div>'
     '<div class="section-note">Explore booking demand across months and hotel types.</div>',
     unsafe_allow_html=True
 )
@@ -556,7 +556,7 @@ if not monthly.empty:
     peak_row = monthly.loc[monthly["bookings"].idxmax()]
     st.markdown(f"""
     <div class="insight-card">
-        <div class="insight-title">💡 Insight</div>
+        <div class="insight-title">Insight</div>
         The highest booking volume in the current selection is
         <b>{int(peak_row["bookings"]):,}</b> bookings for
         <b>{peak_row["hotel"]}</b> in <b>{peak_row["arrival_date_month"]}</b>.
@@ -572,7 +572,7 @@ c1, c2 = st.columns(2)
 # ---------- Chart 2: Hotel distribution ----------
 with c1:
     st.markdown(
-        '<div class="section-heading">🏨 Hotel Type Distribution</div>',
+        '<div class="section-heading">Hotel Type Distribution</div>',
         unsafe_allow_html=True
     )
 
@@ -603,7 +603,7 @@ with c1:
 # ---------- Chart 3: Cancellation rate ----------
 with c2:
     st.markdown(
-        '<div class="section-heading">❌ Cancellation Rate</div>',
+        '<div class="section-heading">Cancellation Rate</div>',
         unsafe_allow_html=True
     )
 
@@ -652,7 +652,7 @@ c3, c4 = st.columns(2)
 # ---------- Chart 4: Stay duration ----------
 with c3:
     st.markdown(
-        '<div class="section-heading">🛏️ Stay Duration vs Cancellation</div>',
+        '<div class="section-heading">Stay Duration vs Cancellation</div>',
         unsafe_allow_html=True
     )
 
@@ -692,7 +692,7 @@ with c3:
 # ---------- Chart 5: Lead time ----------
 with c4:
     st.markdown(
-        '<div class="section-heading">📅 Lead Time vs Cancellation</div>',
+        '<div class="section-heading">Lead Time vs Cancellation</div>',
         unsafe_allow_html=True
     )
 
@@ -744,7 +744,7 @@ with c4:
 # ============================================================
 st.markdown("<br>", unsafe_allow_html=True)
 
-with st.expander("🔎 Explore Detailed Data / Drill Down", expanded=False):
+with st.expander("Explore Detailed Data / Drill Down", expanded=False):
     st.write(
         "Use this section to inspect the records behind the dashboard "
         "after applying your filters."
@@ -771,7 +771,7 @@ with st.expander("🔎 Explore Detailed Data / Drill Down", expanded=False):
 st.markdown("<br>", unsafe_allow_html=True)
 
 st.markdown(
-    '<div class="section-heading">💼 Business Insights</div>',
+    '<div class="section-heading">Business Insights</div>',
     unsafe_allow_html=True
 )
 
